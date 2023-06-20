@@ -1,1 +1,29 @@
+function convertToFahrenheit() {
+    var inputCelsius = document.getElementById('inputCelsius').value;
+    var celsius = parseFloat(inputCelsius);
+    var fahrenheit = (celsius * 9/5) + 32;
+
+    if (!isNaN(fahrenheit)) {
+        document.getElementById('result').innerHTML = celsius + " Celsius = " + fahrenheit.toFixed(2) + " Fahrenheit";
+    } else {
+        document.getElementById('result').innerHTML = "Masukkan suhu dalam angka";
+    }
+}
+
+function reset() {
+    document.getElementById('inputCelsius').value = "";
+    document.getElementById('result').innerHTML = "";
+}
+
+function reverseConversion() {
+    var inputFahrenheit = document.getElementById('inputCelsius').value;
+    var fahrenheit = parseFloat(inputFahrenheit);
+    var celsius = (fahrenheit * 1,8) +32;
+
+    if (!isNaN(celsius)) {
+        document.getElementById('result').innerHTML = fahrenheit + " Fahrenheit = " + celsius.toFixed(2) + " Celsius";
+    } else {
+        document.getElementById('result').innerHTML = "Masukkan suhu dalam angka";
+    }
+}
 
